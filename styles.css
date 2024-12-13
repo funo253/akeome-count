@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: hsl(0, 82%, 46%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: hsl(0, 82%, 46%);
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* ボックス間の余白を調整 */
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 80px; /* 幅を狭めてバランス調整 */
+  height: 80px; /* 高さも固定して調整 */
+  border: 2px solid hsl(0, 82%, 46%);
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box; /* パディングを含むように調整 */
+}
+
+.time-box span {
+  font-size: 2.5em; /* 数字を大きく */
+  line-height: 1; /* 縦方向の詰まりを調整 */
+  color: hsl(0, 82%, 46%);
+}
+
+.time-box p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
