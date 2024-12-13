@@ -8,7 +8,7 @@ function updateCountdown() {
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-    const milliseconds = timeLeft % 1000; // ミリ秒を計算
+    const milliseconds = (timeLeft % 1000).toString().padStart(3, "0"); // ミリ秒を3桁表示に整形
 
     // HTMLに反映
     document.getElementById("days").textContent = days;
@@ -20,7 +20,7 @@ function updateCountdown() {
     // 時間がゼロになったら
     if (timeLeft < 0) {
         clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "<h2>明けましておめでとうございます！</h2>";
+        document.getElementById("countdown").innerHTML = "<h2>あけましておめでとうございます！</h2>";
     }
 }
 
